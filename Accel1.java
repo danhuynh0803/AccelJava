@@ -5,7 +5,8 @@ public class Accel1
     // Method 1: While loops
     // Write a method that returns the summation of all ints <= n
     // For this exercise, you can only use a while loop
-    // Consider what happens when n < 0 
+    // Consider what happens when n < 0
+    // If n < 0, then return the negative summation. For example, if n = -3, then the answer is: -1 + -2 + -3 = -6
     static int summation(int n) 
     {
         // while() {}
@@ -17,7 +18,8 @@ public class Accel1
     // Write a method that takes two int parameters: m and n
     // Return the summation of all numbers from m to n  
     // Only use a for loop
-    // Consider what happens if m > n
+    // Return 0 if m > n
+    // Sum up the negative numbers normally. For example if m = -2, and n = 2, then the answer is: -2 + -1 + 0 + 1 + 2 = 0
     static int summation(int m, int n) 
     {
         // for( ; ; ) {}
@@ -27,8 +29,7 @@ public class Accel1
 
     // Method 3: Do While loops 
     // Your choice: Convert either method 1 or method 2 to a do while loop
-    // Accelerated candidates are required to convert both methods
-    
+    // If you are an Accelerated candidate, then you are required to convert both methods    
     static int doSummation1(int n) 
     { 
         return 0;

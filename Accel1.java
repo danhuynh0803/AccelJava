@@ -47,7 +47,7 @@ public class Accel1
         // Test method 1
 	System.out.println("Testing method 1");  
 	System.out.println((summation(-1) == -1)? "Correct" : "Wrong");
-	System.out.println((summation(10) == 45)? "Correct" : "Wrong");
+	System.out.println((summation(10) == 55)? "Correct" : "Wrong");
 	System.out.println((summation(-3) == -6)? "Correct" : "Wrong");
 	System.out.println();
 
@@ -61,7 +61,7 @@ public class Accel1
 	// Test method 3: part 1 
 	System.out.println("Testing method 3a");  
 	System.out.println((doSummation(-1) == -1)? "Correct" : "Wrong");
-	System.out.println((doSummation(10) == 45)? "Correct" : "Wrong");
+	System.out.println((doSummation(10) == 55)? "Correct" : "Wrong");
 	System.out.println((doSummation(-3) == -6)? "Correct" : "Wrong");	
 	System.out.println();
 

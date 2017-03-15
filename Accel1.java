@@ -50,8 +50,38 @@ public class Accel1
     // Your choice: Convert either method 1 or method 2 to a do while loop
     // If you are an Accelerated candidate, then you are required to convert both methods    
     static int doSummation(int n) 
-    { 
-        return 0;
+    {
+	// Do while
+	int sum = 0;
+	int count = 0;
+	do {
+	    //count++; // wrong
+	    sum += count;
+	    count++; // correct
+	} while (count <= n);
+
+	// n = 2
+	/* 	   
+	   count := 1 
+	   sum += 1 
+	   count <= n (1 <= 2) -> true
+	   count++ (count = 2) 
+	   sum += 1 + 2 
+	   count <= n (2 <= 2) -> true
+	   
+	   sum = 0 + 0 
+	   count++ (count = 1) 
+	   count <= n (1 <= 2) -> true
+	   sum = 0 + 1 
+	   count++ (count = 2) 
+	   count <= n? (2 <= 2) -> true
+	   sum = 1 + 2 
+	   count++ ( count = 3) 
+	   count <= n? ( 3 <= 2) -> False
+
+	*/
+	
+	return sum;
     } 
 
     static int doSummation(int m, int n) 

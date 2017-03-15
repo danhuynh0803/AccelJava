@@ -9,8 +9,15 @@ public class Accel1
     // If n < 0, then return the negative summation. For example, if n = -3, then the answer is: -1 + -2 + -3 = -6
     static int summation(int n) 
     {
-        // while() {}
-        
+      // while() {}
+    	int n, i = 1;
+	int sum = 0;
+
+	while (i <= n)
+	{
+		sum = sum + i;
+		i++;
+	}    
         return 0; 
     } 
 

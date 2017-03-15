@@ -1,7 +1,6 @@
 
 public class Accel1
 {
-
     // Method 1: While loops
     // Write a method that returns the summation of all ints <= n
     // For this exercise, you can only use a while loop
@@ -9,16 +8,27 @@ public class Accel1
     // If n < 0, then return the negative summation. For example, if n = -3, then the answer is: -1 + -2 + -3 = -6
     static int summation(int n) 
     {
-      // while() {}
-    	int n, i = 1;
 	int sum = 0;
-
-	while (i <= n)
-	{
-		sum = sum + i;
-		i++;
-	}    
-        return 0; 
+	int count = 0;
+	if (n >= 0) {
+	    while (count <= n) { 
+		sum += count; 
+		count++;
+	    }
+	} else { // n < 0, so sum up negatives
+	    // Count down from 0 to n, where n is a neg #
+	    while (count >= n) {
+		/*
+		  sum := 0 + 0 
+		  sum := 0 - 1 
+		  sum := -1 - 2 
+		  sum := -3 - 3
+		*/
+		sum += count;
+		count--;
+	    }
+	}
+	return sum;
     } 
 
     // Method 2: For loops 

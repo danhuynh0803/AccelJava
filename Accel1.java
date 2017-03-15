@@ -39,9 +39,11 @@ public class Accel1
     // Sum up the negative numbers normally. For example if m = -2, and n = 2, then the answer is: -2 + -1 + 0 + 1 + 2 = 0
     static int summation(int m, int n) 
     {
-        // for( ; ; ) {}
-        
-        return 0;   
+	int sum = 0;
+	for (int count = m; count <= n; count++) {	    
+	    sum = sum + count; // count = -1 -> 0 -> 1 -> 2
+	}
+	return sum;
     }
 
     // Method 3: Do While loops 

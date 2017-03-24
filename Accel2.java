@@ -9,8 +9,12 @@ public class Accel2
 	{
 		// TODO 
 		//
-
-		return 0; 	
+		int sum = 0;
+		
+		for(int counter = 0; counter<a.length; counter++){
+			sum+=a[counter];
+		}
+		return sum; 	
 	}
 
 	// Find the number closest to zero 

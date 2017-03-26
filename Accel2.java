@@ -7,8 +7,6 @@ public class Accel2
 	// Output: sum of all elements of the input array
 	static int summation(int[] a) 
 	{
-		// TODO 
-		//
 		int sum = 0;
 		
 		for(int counter = 0; counter<a.length; counter++){
@@ -22,20 +20,16 @@ public class Accel2
 	// You may also assume that the array will never be empty 
 	static int closestToZero(int[] a) 
 	{
-		// TODO 
-		//
-		int num = a[0];
-		int absNum = Math.abs(num);
-		for (int counter = 1; counter < a.length; ++counter) {
-			int newAbs = Math.abs(a[counter]);
-			if(newAbs < absNum) {
-				
-				num = a[counter];
+        // closestToZero: stores the number closest to zero 
+        int closestToZero = a[0];   
+        for (int i = 1; i < a.length; ++i) { 
+            // compare our current element with closestToZero 
+            if (closestToZero > Math.abs(a[i])) { 
+                closestToZero = a[i];
+            }
+        }
 
-	}
-		}
-
-		return num; 
+		return closestToZero; 
 	}
 
 	// (OPTIONAL)	
@@ -44,10 +38,9 @@ public class Accel2
 	// Return that sorted, appended array
 	static int[] appendIncOrder(int[] a, int[] b) 
 	{
-		// TODO
-		//
-
-		return null; 
+        int[] result = new int[a.length + b.length]; 
+        
+		return result;
 	}	
 
 	public static void main(String[] args) 
@@ -69,11 +62,11 @@ public class Accel2
 		System.out.println();
 		// Testing method2 
 		System.out.println("Testing method2");
-		System.out.println((summation(a) == 0)? "Correct" : "Wrong");		
-		System.out.println((summation(a) == 1)? "Correct" : "Wrong");		
-		System.out.println((summation(a) == -1)? "Correct" : "Wrong");		
-		System.out.println((summation(a) == 0)? "Correct" : "Wrong");		
-		System.out.println((summation(a) == 96)? "Correct" : "Wrong");		
+		System.out.println((closestToZero(a) == 0)? "Correct" : "Wrong");		
+        System.out.println((closestToZero(b) == 1)? "Correct" : "Wrong");		
+		System.out.println((closestToZero(c) == -1)? "Correct" : "Wrong");		
+		System.out.println((closestToZero(d) == 0)? "Correct" : "Wrong");		
+		System.out.println((closestToZero(e) == 96)? "Correct" : "Wrong");		
 		System.out.println();
 		// Testing method3
 		System.out.println("Testing method3");

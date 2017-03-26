@@ -24,8 +24,18 @@ public class Accel2
 	{
 		// TODO 
 		//
+		int num = a[0];
+		int absNum = Math.abs(num);
+		for (int counter = 1; counter < a.length; ++counter) {
+			int newAbs = Math.abs(a[counter]);
+			if(newAbs < absNum) {
+				
+				num = a[counter];
 
-		return 0; 
+	}
+		}
+
+		return num; 
 	}
 
 	// (OPTIONAL)	

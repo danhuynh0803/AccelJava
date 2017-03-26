@@ -38,16 +38,35 @@ public class Accel2
 	// Return that sorted, appended array
 	static int[] appendIncOrder(int[] a, int[] b) 
 	{
-        int[] result = new int[a.length + b.length]; 
-        
+	// Total length of appended arrays is equal to length of first & second array
+	//Assign int to first, second, and sorted array respectively
+        int[] result = new int[a.length + b.length];
+		int i = 0, j = 0, k = 0; 
+
+	//Compare elements between arrays
+	//After each set of numbers are compared, add to sorted array	
+	while (i < a.length && j < b.length)
+	{
+		if(a[i] < b[j])
+			{
+			result[k] = a[i];
+			i++;
+			}
+		else
+			{
+			result[k] = b[j];
+			j++;
+			}
+			k++; 
+			       
 		return result;
 	}	
-
+	}
 	public static void main(String[] args) 
 	{
 		// Datasets 
-		int[] a = {0, 0, 0, 0, 0}; 
-		int[] b = {1, 2, 3, 4, 5}; 
+		int[] a = {1, 4, 6, 8, 9}; 
+		int[] b = {2, 5, 7, 8, 10}; 
 		int[] c = {-1, -2, -3, -4, -5}; 
 		int[] d = {7, 2, 4, 0, 10}; 
 		int[] e = {100, 99, 98, 97, 96}; 
@@ -70,7 +89,7 @@ public class Accel2
 		System.out.println();
 		// Testing method3
 		System.out.println("Testing method3");
-		int[] result = {0,0,0,0,0,1,2,3,4,5}; 
+		int[] result = {1,2,4,5,6,7,8,8,9,10}; 
 		System.out.println( 
 						Arrays.equals(appendIncOrder(a,b), result)? "Correct" : "Wrong");
 

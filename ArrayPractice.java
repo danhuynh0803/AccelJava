@@ -1,7 +1,7 @@
 
 import java.util.Arrays;
 
-public class Arrays
+public class ArrayPractice
 {
     // Input: an int array
     // Output: sum of all elements of the input array
